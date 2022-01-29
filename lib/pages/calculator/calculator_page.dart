@@ -93,7 +93,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
                     });
                   }
                 },
-                colorButton: Theme.of(context).primaryColor,
+                colorButton: Theme.of(context).colorScheme.primary,
               ),
               const SizedBox(height: 40),
               Text(textInfo),
