@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ioasys_projects/pages/calculator/calculator_page.dart';
+import 'package:ioasys_projects/pages/chuck_norris/pages/categories/categories_page.dart';
+import 'package:ioasys_projects/pages/chuck_norris/pages/joke/joke_page.dart';
 import 'package:ioasys_projects/pages/currency_conversion/currency_conversion_page.dart';
 import 'package:ioasys_projects/pages/login/login_page.dart';
 import 'package:ioasys_projects/pages/todo/todo_list_page.dart';
@@ -32,6 +34,10 @@ class MyApp extends StatelessWidget {
         '/calculator': (context) => const CalculatorPage(),
         '/todo': (context) => const TodoListPage(),
         '/currency_conversion': (context) => const CurrencyConversionPage(),
+        '/chuck_categories': (context) => const ChuckCategoriesPage(),
+        '/joke': (context) => JokePage(
+              category: ModalRoute.of(context)?.settings.arguments as String,
+            ),
       },
     );
   }
