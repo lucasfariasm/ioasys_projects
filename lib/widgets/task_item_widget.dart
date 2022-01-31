@@ -17,7 +17,7 @@ class TaskItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Dismissible(
       key: Key(DateTime.now().millisecondsSinceEpoch.toString()),
-      onDismissed: (direction) {},
+      onDismissed: onDismissed,
       child: CheckboxListTile(
         value: completed,
         onChanged: onChanged,
