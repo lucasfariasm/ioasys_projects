@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioasys_projects/pages/calculator/calculator_page.dart';
+import 'package:ioasys_projects/pages/currency_conversion/currency_conversion_page.dart';
 import 'package:ioasys_projects/pages/login/login_page.dart';
 import 'package:ioasys_projects/pages/todo/todo_list_page.dart';
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const LoginPage(),
         '/calculator': (context) => const CalculatorPage(),
         '/todo': (context) => const TodoListPage(),
+        '/currency_conversion': (context) => const CurrencyConversionPage(),
       },
     );
   }
