@@ -13,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -47,6 +47,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 20),
               CustomTextField(
                 label: 'senha',
+                obscureText: true,
                 fillColor: Colors.white,
                 filled: true,
                 borderStyle: OutlineInputBorder(
