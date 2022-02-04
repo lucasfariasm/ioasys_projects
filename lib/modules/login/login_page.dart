@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ioasys_projects/modules/login/login_page_controller.dart';
+import 'package:ioasys_projects/shared/theme/app_theme.dart';
 import 'package:ioasys_projects/shared/widgets/button.dart';
 import 'package:ioasys_projects/shared/widgets/custom_text_field.dart';
 
@@ -10,29 +12,24 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final controller = LoginPageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primary,
+      backgroundColor: AppTheme.colors.background,
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-              const SizedBox(height: 50),
-              Image.asset('assets/images/logo_ioasys.png'),
               const SizedBox(height: 100),
-              const Text(
+              Image.asset('assets/images/logo_ioasys.png',
+                  color: AppTheme.colors.primary),
+              const SizedBox(height: 40),
+              Text(
                 'Seja bem-vindo!',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: AppTheme.colors.primary,
                   fontSize: 32,
-                ),
-              ),
-              const Text(
-                'Calculadora IMC',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
                 ),
               ),
               const SizedBox(height: 40),
@@ -41,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
                 fillColor: Colors.white,
                 filled: true,
                 borderStyle: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(40),
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
               const SizedBox(height: 20),
@@ -51,14 +48,22 @@ class _LoginPageState extends State<LoginPage> {
                 fillColor: Colors.white,
                 filled: true,
                 borderStyle: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(40),
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
               const SizedBox(height: 20),
               Button(
-                textButton: 'ENTRAR',
+                textButton: 'Entrar',
                 onPressed: () {
-                  Navigator.of(context).pushReplacementNamed('/calculator');
+                  controller.onLoading(context);
+                },
+                colorButton: AppTheme.colors.primary,
+              ),
+              const SizedBox(height: 10),
+              Button(
+                textButton: 'Criar uma conta',
+                onPressed: () {
+                  Navigator.pushNamed(context, "/login/create-account");
                 },
                 colorButton: Colors.black,
               )

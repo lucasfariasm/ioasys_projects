@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:ioasys_projects/shared/theme/app_theme.dart';
 
 class CustomTextField extends StatelessWidget {
   final String label;
   final TextEditingController? controller;
   final bool obscureText;
   final Color? fillColor;
-  final bool filled ;
+  final bool filled;
   final OutlineInputBorder? borderStyle;
 
   const CustomTextField({
@@ -15,7 +16,7 @@ class CustomTextField extends StatelessWidget {
     this.obscureText = false,
     this.fillColor,
     this.filled = false,
-    this.borderStyle
+    this.borderStyle,
   }) : super(key: key);
 
   @override
@@ -27,11 +28,15 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         obscureText: obscureText,
         decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: AppTheme.colors.border, width: 2.0)
+          ),
+          contentPadding: const EdgeInsets.only(bottom: 25, left: 15),
           fillColor: fillColor,
           filled: filled,
           border: borderStyle,
-          hintText: label,
-          hintStyle: const TextStyle(color: Color(0xff767676)),
+          labelText: label,
+          hintStyle: TextStyle(color: AppTheme.colors.secondary),
         ),
       ),
     );
