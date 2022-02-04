@@ -4,6 +4,7 @@ import 'package:ioasys_projects/modules/chuck_norris/pages/categories/categories
 import 'package:ioasys_projects/modules/chuck_norris/pages/joke/joke_page.dart';
 import 'package:ioasys_projects/modules/currency_conversion/currency_conversion_page.dart';
 import 'package:ioasys_projects/modules/login/login_page.dart';
+import 'package:ioasys_projects/modules/splash/splash_page.dart';
 import 'package:ioasys_projects/modules/todo/todo_list_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -24,9 +25,10 @@ class MyApp extends StatelessWidget {
         iconTheme: const IconThemeData(color: Color(0xffC1007E)),
         listTileTheme: const ListTileThemeData(iconColor: Color(0xffC1007E)),
       ),
-      initialRoute: '/',
+      initialRoute: '/splash',
       routes: {
-        '/': (context) => const LoginPage(),
+        '/splash': (context) => const SplashPage(),
+        '/login': (context) => const LoginPage(),
         '/calculator': (context) => const CalculatorPage(),
         '/todo': (context) => const TodoListPage(),
         '/currency_conversion': (context) => const CurrencyConversionPage(),
