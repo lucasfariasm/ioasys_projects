@@ -10,7 +10,7 @@ class SplashPage extends StatelessWidget {
     });
 
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primary,
+      backgroundColor: Colors.black,
       body: Center(
         child: Image.asset('assets/images/ioasys_animation.gif'),
       ),
