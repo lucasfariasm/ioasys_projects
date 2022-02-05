@@ -3,6 +3,7 @@ import 'package:ioasys_projects/modules/calculator/calculator_page.dart';
 import 'package:ioasys_projects/modules/chuck_norris/pages/categories/categories_page.dart';
 import 'package:ioasys_projects/modules/chuck_norris/pages/joke/joke_page.dart';
 import 'package:ioasys_projects/modules/currency_conversion/currency_conversion_page.dart';
+import 'package:ioasys_projects/modules/home/home_page.dart';
 import 'package:ioasys_projects/modules/login/login_page.dart';
 import 'package:ioasys_projects/modules/login/pages/create_account/create_account_page.dart';
 import 'package:ioasys_projects/modules/splash/splash_page.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/splash': (context) => const SplashPage(),
         '/login': (context) => const LoginPage(),
         '/login/create-account': (context) => const CreateAccountPage(),
+        '/home': (context) => const HomePage(),
         '/calculator': (context) => const CalculatorPage(),
         '/todo': (context) => const TodoListPage(),
         '/currency_conversion': (context) => const CurrencyConversionPage(),

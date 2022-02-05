@@ -14,7 +14,7 @@ class LoginPageController {
       },
     );
     Future.delayed(const Duration(seconds: 2)).then((value) {
-      Navigator.of(context).pushReplacementNamed('/calculator');
+      Navigator.of(context).pushReplacementNamed('/home');
     });
   }
 }
