@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioasys_projects/modules/home/components/card_util.dart';
+import 'package:ioasys_projects/modules/home/components/drawer.dart';
 import 'package:ioasys_projects/modules/home/components/profile.dart';
 import 'package:ioasys_projects/modules/home/components/top_container.dart';
 import 'package:ioasys_projects/shared/theme/app_theme.dart';
@@ -15,6 +16,7 @@ class HomePage extends StatelessWidget {
         elevation: 0,
         actions: [Image.asset('assets/images/logo_home.png')],
       ),
+      drawer: const CustomDrawer(),
       backgroundColor: AppTheme.colors.background,
       body: SafeArea(
         child: Column(
