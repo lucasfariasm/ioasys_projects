@@ -1,0 +1,47 @@
+{
+  "home_utils": "Utils",
+
+  "drawer_text": "Ioasys Camp 2022 ",
+  "drawer_about": "About",
+  "drawer_logout": "Logout",
+
+  "login_welcome": "Welcome!",
+  "login_user": "user",
+  "login_password": "password",
+  "login_enter": "Enter",
+  "login_create_account": "Creating an account",
+  "login_create_account_name": "Name",
+  "login_create_account_email": "E-mail",
+  "login_create_account_password": "Password",
+  "login_create_account_password_confirm": "Confirm your password",
+  "login_create_account_button": "Create an account",
+  "login_create_account_already_login": "Already have an account? ",
+  "login_create_account_do_login": "Login.",
+
+  "calculator_title": "BMI calculator",
+  "calculator_weight": "Weight (kg)",
+  "calculator_height": "Height (cm)",
+  "calculator_button": "Calculate",
+  "calculator_info": "Inform your data.",
+  "calculator_under_weight": "You are underweight (%s)",
+  "calculator_ideal_weight": "You are at your ideal weight (%s)",
+  "calculator_overweight": "You are slightly overweight. (%s)",
+  "calculator_obesity_I": "You are obese grade I (%s)",
+  "calculator_obesity_II": "You are obese grade II (%s)",
+  "calculator_obesity_III": "You are obese grade III (%s)",
+
+  "chuck_norris_title": "Chuck Norris Jokes",
+  "chuck_norris_categories": "Chuck Norris - Categories",
+
+  "currency_conversion_title": "Currency converter",
+  "currency_conversion_brl": "Real",
+  "currency_conversion_brl_symbol": "R$ ",
+  "currency_conversion_usd": "Dollars",
+  "currency_conversion_usd_symbol": "US$ ",
+  "currency_conversion_eur": "Euro",
+  "currency_conversion_eur_symbol": "£ ",
+
+  "todo_title": "To-do",
+  "todo_new": "New Task",
+  "todo_add": "ADD"
+}

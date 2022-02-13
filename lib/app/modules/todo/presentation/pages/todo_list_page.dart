@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:ioasys_projects/shared/widgets/app_bar.dart';
+import 'package:localization/localization.dart';
 
 import 'todo_list_controller.dart';
 import 'widgets/input_task_widget.dart';
@@ -18,14 +19,14 @@ class _TodoListPageState extends ModularState<TodoListPage, ToDoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyAppBar(title: 'Lista de tarefas'),
+      appBar: MyAppBar(title: 'todo_title'.i18n()),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(17, 24, 17, 40),
             child: InputTaskWidget(
-              labelText: 'Nova Tarefa',
-              textButton: 'ADD',
+              labelText: 'todo_new'.i18n(),
+              textButton: 'todo_add'.i18n(),
               textController: controller.textController,
               onPressed: () {
                 controller.addToDo();

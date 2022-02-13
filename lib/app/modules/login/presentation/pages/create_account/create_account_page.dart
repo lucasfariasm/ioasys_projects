@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ioasys_projects/shared/theme/app_theme.dart';
 import 'package:ioasys_projects/shared/widgets/button.dart';
 import 'package:ioasys_projects/shared/widgets/custom_text_field.dart';
+import 'package:localization/localization.dart';
 
 class CreateAccountPage extends StatelessWidget {
   const CreateAccountPage({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class CreateAccountPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Criando uma conta',
+                'login_create_account'.i18n(),
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.primary,
                   fontSize: 24,
@@ -30,7 +31,7 @@ class CreateAccountPage extends StatelessWidget {
               ),
               const SizedBox(height: 50),
               CustomTextField(
-                label: 'Nome',
+                label: 'login_create_account_name'.i18n(),
                 fillColor: Colors.white,
                 filled: true,
                 borderStyle: OutlineInputBorder(
@@ -39,7 +40,7 @@ class CreateAccountPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               CustomTextField(
-                label: 'E-mail',
+                label: 'login_create_account_email'.i18n(),
                 fillColor: Colors.white,
                 filled: true,
                 borderStyle: OutlineInputBorder(
@@ -48,7 +49,7 @@ class CreateAccountPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               CustomTextField(
-                label: 'Senha',
+                label: 'login_create_account_password'.i18n(),
                 obscureText: true,
                 fillColor: Colors.white,
                 filled: true,
@@ -58,7 +59,7 @@ class CreateAccountPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               CustomTextField(
-                label: 'Confirme sua senha',
+                label: 'login_create_account_password_confirm'.i18n(),
                 obscureText: true,
                 fillColor: Colors.white,
                 filled: true,
@@ -68,7 +69,7 @@ class CreateAccountPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Button(
-                textButton: 'Criar conta',
+                textButton: 'login_create_account_button'.i18n(),
                 onPressed: () {
                   Navigator.of(context).pushReplacementNamed('/login/');
                 },
@@ -78,11 +79,11 @@ class CreateAccountPage extends StatelessWidget {
               Text.rich(
                 TextSpan(
                   style: TextStyle(color: AppTheme.colors.secondary),
-                  children: const [
-                    TextSpan(text: 'Já tem uma conta? '),
+                  children: [
+                    TextSpan(text: 'login_create_account_already_login'.i18n()),
                     TextSpan(
-                      text: 'Faça login.',
-                      style: TextStyle(
+                      text: 'login_create_account_do_login'.i18n(),
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),

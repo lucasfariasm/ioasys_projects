@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:ioasys_projects/shared/widgets/app_bar.dart';
+import 'package:localization/localization.dart';
 
 import 'currency_conversion_controller.dart';
 import 'widgets/custom_text_field_currencie.dart';
@@ -21,7 +22,7 @@ class _CurrencyConversionPageState extends ModularState<CurrencyConversionPage, 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyAppBar(title: 'Conversor de Moedas'),
+      appBar: MyAppBar(title: 'currency_conversion_title'.i18n()),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -30,8 +31,8 @@ class _CurrencyConversionPageState extends ModularState<CurrencyConversionPage, 
               Image.asset('assets/images/coin.png'),
               const SizedBox(height: 40),
               CustomTextFieldCurrencie(
-                labelText: 'Reais',
-                prefix: 'R\$ ',
+                labelText: 'currency_conversion_brl'.i18n(),
+                prefix: 'currency_conversion_brl_symbol'.i18n(),
                 borderStyle:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                 keyboard: const TextInputType.numberWithOptions(decimal: true),
@@ -40,8 +41,8 @@ class _CurrencyConversionPageState extends ModularState<CurrencyConversionPage, 
               ),
               const SizedBox(height: 20),
               CustomTextFieldCurrencie(
-                labelText: 'Dólares',
-                prefix: 'US\$ ',
+                labelText: 'currency_conversion_usd'.i18n(),
+                prefix: 'currency_conversion_usd_symbol'.i18n(),
                 borderStyle:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                 keyboard: const TextInputType.numberWithOptions(decimal: true),
@@ -50,8 +51,8 @@ class _CurrencyConversionPageState extends ModularState<CurrencyConversionPage, 
               ),
               const SizedBox(height: 20),
               CustomTextFieldCurrencie(
-                labelText: 'Euros',
-                prefix: '£ ',
+                labelText: 'currency_conversion_eur'.i18n(),
+                prefix: 'currency_conversion_eur_symbol'.i18n(),
                 borderStyle:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                 keyboard: const TextInputType.numberWithOptions(decimal: true),

@@ -4,6 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:ioasys_projects/shared/widgets/app_bar.dart';
 import 'package:ioasys_projects/shared/widgets/button.dart';
 import 'package:ioasys_projects/shared/widgets/custom_text_field.dart';
+import 'package:localization/localization.dart';
 
 import 'calculator_controller.dart';
 
@@ -19,7 +20,7 @@ class _CalculatorPageState extends ModularState<CalculatorPage, CalculatorContro
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(
-        title: 'Calculadora de IMC',
+        title: 'calculator_title'.i18n(),
         actions: <Widget>[
           IconButton(
             icon: const Icon(
@@ -40,17 +41,17 @@ class _CalculatorPageState extends ModularState<CalculatorPage, CalculatorContro
               Image.asset('assets/images/avatar.png'),
               const SizedBox(height: 40),
               CustomTextField(
-                label: 'Peso (kg)',
+                label: 'calculator_weight'.i18n(),
                 controller: controller.weightController,
               ),
               const SizedBox(height: 20),
               CustomTextField(
-                label: 'Altura (cm)',
+                label: 'calculator_height'.i18n(),
                 controller: controller.heightController,
               ),
               const SizedBox(height: 40),
               Button(
-                textButton: 'Calcular',
+                textButton: 'calculator_button'.i18n(),
                 onPressed: () {
                   if (controller.weightController.text.isNotEmpty &&
                       controller.heightController.text.isNotEmpty) {

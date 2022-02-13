@@ -1,0 +1,47 @@
+{
+  "home_utils": "Utilitários",
+
+  "drawer_text": "Ioasys Camp 2022 ",
+  "drawer_about": "Sobre",
+  "drawer_logout": "Sair",
+
+  "login_welcome": "Seja bem-vindo!",
+  "login_user": "usuário",
+  "login_password": "senha",
+  "login_enter": "Entrar",
+  "login_create_account": "Criando uma conta",
+  "login_create_account_name": "Nome",
+  "login_create_account_email": "E-mail",
+  "login_create_account_password": "Senha",
+  "login_create_account_password_confirm": "Confirme sua senha",
+  "login_create_account_button": "Criar conta",
+  "login_create_account_already_login": "Já tem uma conta? ",
+  "login_create_account_do_login": "Faça login.",
+
+  "calculator_title": "Calculadora de IMC",
+  "calculator_weight": "Peso (kg)",
+  "calculator_height": "Altura (cm)",
+  "calculator_button": "Calcular",
+  "calculator_info": "Informe seus dados",
+  "calculator_under_weight": "Você está abaixo do peso (%s)",
+  "calculator_ideal_weight": "Você está no peso ideal (%s)",
+  "calculator_overweight": "Você está levemente acima do peso (%s)",
+  "calculator_obesity_I": "Você está com obesidade grau I (%s)",
+  "calculator_obesity_II": "Você está com obesidade grau II (%s)",
+  "calculator_obesity_III": "Você está com obesidade grau III (%s)",
+
+  "chuck_norris_title": "Piadas do Chuck Norris",
+  "chuck_norris_categories": "Chuck Norris - Categorias",
+
+  "currency_conversion_title": "Conversor de Moedas",
+  "currency_conversion_brl": "Reais",
+  "currency_conversion_brl_symbol": "R$ ",
+  "currency_conversion_usd": "Dólares",
+  "currency_conversion_usd_symbol": "US$ ",
+  "currency_conversion_eur": "Euros",
+  "currency_conversion_eur_symbol": "£ ",
+
+  "todo_title": "Lista de tarefas",
+  "todo_new": "Nova Tarefa",
+  "todo_add": "ADD"
+}

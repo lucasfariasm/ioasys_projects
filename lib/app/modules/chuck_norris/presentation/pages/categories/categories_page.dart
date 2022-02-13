@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:ioasys_projects/app/modules/chuck_norris/presentation/models/chuck_category_model.dart';
 import 'package:ioasys_projects/shared/widgets/app_bar.dart';
+import 'package:localization/localization.dart';
 
 import 'categories_controller.dart';
 import 'components/list_categories_widget.dart';
@@ -17,7 +18,7 @@ class _ChuckCategoriesPageState extends ModularState<ChuckCategoriesPage, Catego
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyAppBar(title: 'Chuck Norris - Categories'),
+      appBar: MyAppBar(title: 'chuck_norris_categories'.i18n()),
       body: FutureBuilder<List<ChuckCategoryModel>>(
         future: controller.getJokesCategories(),
         builder: (context, snapshot) {

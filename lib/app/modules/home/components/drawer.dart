@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ioasys_projects/shared/theme/app_theme.dart';
+import 'package:localization/localization.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -21,17 +22,17 @@ class CustomDrawer extends StatelessWidget {
                   bottom: 16.0,
                   child: RichText(
                     textAlign: TextAlign.center,
-                    text: const TextSpan(
+                    text: TextSpan(
                       children: [
-                        TextSpan(text: 'Ioasys Camp 2022 '),
-                        WidgetSpan(
+                        TextSpan(text: 'drawer_text'.i18n()),
+                        const WidgetSpan(
                           child: Icon(
                             Icons.favorite,
                             color: Colors.white,
                           ),
                         ),
                       ],
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                       ),
@@ -43,22 +44,22 @@ class CustomDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Row(
-              children: const [
-                Icon(Icons.info),
+              children: [
+                const Icon(Icons.info),
                 Padding(
-                  padding: EdgeInsets.only(left: 8),
-                  child: Text('Sobre'),
+                  padding: const EdgeInsets.only(left: 8),
+                  child: Text('drawer_about'.i18n()),
                 ),
               ],
             ),
           ),
           ListTile(
             title: Row(
-              children: const [
-                Icon(Icons.logout),
+              children: [
+                const Icon(Icons.logout),
                 Padding(
-                  padding: EdgeInsets.only(left: 8),
-                  child: Text('Sair'),
+                  padding: const EdgeInsets.only(left: 8),
+                  child: Text('drawer_logout'.i18n()),
                 ),
               ],
             ),

@@ -3,6 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:ioasys_projects/shared/theme/app_theme.dart';
 import 'package:ioasys_projects/shared/widgets/button.dart';
 import 'package:ioasys_projects/shared/widgets/custom_text_field.dart';
+import 'package:localization/localization.dart';
 
 import 'login_page_controller.dart';
 
@@ -27,7 +28,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginPageController> {
                   color: AppTheme.colors.primary),
               const SizedBox(height: 40),
               Text(
-                'Seja bem-vindo!',
+                'login_welcome'.i18n(),
                 style: TextStyle(
                   color: AppTheme.colors.primary,
                   fontSize: 32,
@@ -35,7 +36,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginPageController> {
               ),
               const SizedBox(height: 40),
               CustomTextField(
-                label: 'usuário',
+                label: 'login_user'.i18n(),
                 fillColor: Colors.white,
                 filled: true,
                 borderStyle: OutlineInputBorder(
@@ -44,7 +45,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginPageController> {
               ),
               const SizedBox(height: 20),
               CustomTextField(
-                label: 'senha',
+                label: 'login_password'.i18n(),
                 obscureText: true,
                 fillColor: Colors.white,
                 filled: true,
@@ -54,7 +55,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginPageController> {
               ),
               const SizedBox(height: 20),
               Button(
-                textButton: 'Entrar',
+                textButton: 'login_enter'.i18n(),
                 onPressed: () {
                   controller.onLoading(context);
                 },
@@ -62,7 +63,7 @@ class _LoginPageState extends ModularState<LoginPage, LoginPageController> {
               ),
               const SizedBox(height: 10),
               Button(
-                textButton: 'Criar uma conta',
+                textButton: 'login_create_account'.i18n(),
                 onPressed: () {
                   Modular.to.pushNamed("create-account");
                 },

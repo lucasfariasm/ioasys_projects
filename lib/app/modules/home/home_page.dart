@@ -6,6 +6,7 @@ import 'package:ioasys_projects/app/modules/home/components/profile.dart';
 import 'package:ioasys_projects/app/modules/home/components/top_container.dart';
 import 'package:ioasys_projects/app/modules/home/home_module.dart';
 import 'package:ioasys_projects/shared/theme/app_theme.dart';
+import 'package:localization/localization.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -96,9 +97,9 @@ class HomePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        'Utilitários',
-                        style: TextStyle(
+                      Text(
+                        'home_utils'.i18n(),
+                        style: const TextStyle(
                           fontSize: 24.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -107,7 +108,7 @@ class HomePage extends StatelessWidget {
                       Row(
                         children: [
                           CardUtil(
-                            title: 'Calculadora de IMC',
+                            title: 'calculator_title'.i18n(),
                             icon: Icons.calculate,
                             onTap: () {
                               Modular.to.pushNamed(HomeModule.routeCalculator);
@@ -115,7 +116,7 @@ class HomePage extends StatelessWidget {
                           ),
                           const SizedBox(width: 20.0),
                           CardUtil(
-                            title: 'Conversor de Moedas',
+                            title: 'currency_conversion_title'.i18n(),
                             icon: Icons.account_balance,
                             onTap: () {
                               Modular.to.pushNamed(HomeModule.routeCurrencyConversion);
@@ -126,7 +127,7 @@ class HomePage extends StatelessWidget {
                       Row(
                         children: [
                           CardUtil(
-                            title: 'To-do',
+                            title: 'todo_title'.i18n(),
                             icon: Icons.add_task,
                             onTap: () {
                               Modular.to.pushNamed(HomeModule.routeToDo);
@@ -134,7 +135,7 @@ class HomePage extends StatelessWidget {
                           ),
                           const SizedBox(width: 20.0),
                           CardUtil(
-                            title: 'Piadas do Chuck Norris',
+                            title: 'chuck_norris_title'.i18n(),
                             icon: Icons.face,
                             onTap: () {
                               Modular.to.pushNamed(HomeModule.routeChuckNorris);
