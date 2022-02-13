@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:ioasys_projects/modules/currency_conversion/models/currencies.dart';
+import 'package:ioasys_projects/app/modules/currency_conversion/presentation/models/currencies.dart';
 
 class FetchCurrenciesCommand {
   Future<Currencies> call() async {

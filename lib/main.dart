@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:ioasys_projects/app/app_module.dart';
 
-import 'my_app_widget.dart';
+import 'app/app_widget.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ModularApp(module: AppModule(), child: const AppWidget()));
 }
 
